@@ -20,4 +20,4 @@ RUN cd /tmp && \
 
 RUN git clone https://github.com/neurolabusc/dcm_qa.git /tmp/dcm_qa
 
-ENTRYPOINT ["dcm2niix","/tmp/dcm_qa"]
+ENTRYPOINT ["dcm2niix"]
