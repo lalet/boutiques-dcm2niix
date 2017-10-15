@@ -1,6 +1,6 @@
 {
     "tool-version": "1.0", 
-    "name": "dcm2niix", 
+    "name": "Boutiques dcm2niix", 
     "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
     "inputs": [
         {
