@@ -3,16 +3,16 @@ language: python
 sudo: required
 
 services:
-- docker
+- docker 
 
 python:
 - 2.7
 
 install: true
+- git clone https://github.com/neurolabusc/dcm_qa.git
 
 before_script:
 - docker build -t dcm2niix .
-- git clone clone https://github.com/neurolabusc/dcm_qa.git
 
 script: 
 - docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix dcm_qa
