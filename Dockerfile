@@ -2,8 +2,11 @@ FROM ubuntu:trusty
 
 # Install Dependencies
 RUN apt-get update && apt-get upgrade -y && \
-	apt-get install -y build-essential pkg-config cmake git pigz && \
+	apt-get install -y build-essential pkg-config cmake git pigz python-pip python-dev build-essential && \
 	apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y
+
+RUN pip install --upgrade pip && \
+    pip install --upgrade virtualenv  
 
 # Get dcm2niix from github and compile
 RUN cd /tmp && \
