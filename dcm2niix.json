@@ -1,0 +1,33 @@
+{
+    "tool-version": "1.0", 
+    "name": "dcm2niix", 
+    "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
+    "inputs": [
+        {
+            "description": "DICOM Image folder with valid dicom images", 
+            "value-key": "[INPUT_FOLDER]", 
+            "type": "File", 
+            "optional": false, 
+            "id": "input_folder", 
+            "name": "Dicom Image Folder"
+        }, 
+    ], 
+    "container-image": {
+        "image": "laletscaria/boutiques-dcm2niix:latest", 
+        "type": "docker"
+    }, 
+    "schema-version": "0.5", 
+    "output-files": [
+        {
+            "path-template": "[OUTPUT_FOLDER]", 
+            "description": "Output nifti files", 
+            "optional": false, 
+            "id": "results", 
+            "name": "Results"
+        }
+    ], 
+    "suggested-resources": {
+        "walltime-estimate": 25200
+    }, 
+    "description": "Dicom to nifti boutiques descriptor"
+}
