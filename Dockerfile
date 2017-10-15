@@ -8,6 +8,8 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN pip install --upgrade pip && \
     pip install --upgrade virtualenv  
 
+RUN pip install boutiques
+
 # Get dcm2niix from github and compile
 RUN cd /tmp && \
 	git clone https://github.com/rordenlab/dcm2niix.git && \
