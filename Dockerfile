@@ -1,5 +1,6 @@
 FROM ubuntu:trusty
 
+USER root
 # Install Dependencies
 RUN apt-get update && apt-get upgrade -y && \
 	apt-get install -y build-essential pkg-config cmake git pigz python-pip python-dev build-essential && \
@@ -17,4 +18,6 @@ RUN cd /tmp && \
 	cmake -DBATCH_VERSION=ON -DUSE_OPENJPEG=ON .. && \
 	make && make install
 
-RUN git clone https://github.com/neurolabusc/dcm_qa.git /home/dcm_qa
+RUN git clone https://github.com/neurolabusc/dcm_qa.git /tmp/dcm_qa
+
+ENTRYPOINT ["dcm2niix","/tmp/dcm_qa"]

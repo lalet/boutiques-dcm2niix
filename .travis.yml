@@ -14,4 +14,4 @@ before_script:
 - docker build -t dcm2niix .
 
 script: 
-- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix /home/dcm_qa
+- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix
