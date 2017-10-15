@@ -1,0 +1,17 @@
+language: python
+
+sudo: required
+
+services:
+- docker
+
+python:
+- 2.7
+
+install: true
+
+before_script:
+- docker build -t dcm2niix .
+
+script: 
+- docker run --rm=false -v -v $PWD:$PWD -w $PWD dcm2niix /home/dcm_qa
