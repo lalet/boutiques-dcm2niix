@@ -1,8 +1,8 @@
 {
     "tool-version": "1.0", 
     "name": "Boutiques dcm2niix", 
-    "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
-    "inputs": [
+    "command-line": "[INPUT_FOLDER] [OUTPUT_FOLDER]", 
+    "inputs":[
         {
             "description": "DICOM Image folder with valid dicom images", 
             "value-key": "[INPUT_FOLDER]", 
@@ -10,14 +10,22 @@
             "optional": false, 
             "id": "input_folder", 
             "name": "Dicom Image Folder"
-        }, 
+        },
+        {   
+            "description": "Nifti images directory", 
+            "value-key": "[OUTPUT_FOLDER]", 
+            "type": "File", 
+            "optional": false, 
+            "id": "output_folder", 
+            "name": "Nifti Image Folder"
+        } 
     ], 
     "container-image": {
         "image": "laletscaria/boutiques-dcm2niix:latest", 
         "type": "docker"
     }, 
     "schema-version": "0.5", 
-    "output-files": [
+    "output-files":[ 
         {
             "path-template": "[OUTPUT_FOLDER]", 
             "description": "Output nifti files", 
