@@ -12,7 +12,7 @@ install:
 - git clone https://github.com/neurolabusc/dcm_qa.git
 
 before_script:
-- docker build -t dcm2niix .
+- docker build -t dcm2niix_image .
 
 script: 
-- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix dcm_qa
+- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix_image dcm2niix dcm_qa
