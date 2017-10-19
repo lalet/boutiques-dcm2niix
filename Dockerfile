@@ -1,6 +1,7 @@
 FROM ubuntu:trusty
 
 USER root
+
 # Install Dependencies
 RUN apt-get update && apt-get upgrade -y && \
 	apt-get install -y build-essential pkg-config cmake git pigz python-pip python-dev build-essential && \
