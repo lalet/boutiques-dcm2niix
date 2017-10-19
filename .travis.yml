@@ -7,12 +7,13 @@ services:
 
 python:
 - 2.7
+- 3.0
 
 install:
 - git clone https://github.com/neurolabusc/dcm_qa.git
 
 before_script:
-- docker build -t dcm2niix_image .
+- docker build -t dcm2niix_image -f Dockerfile .
 
 script: 
 - docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix_image dcm2niix dcm_qa
