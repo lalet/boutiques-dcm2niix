@@ -11,10 +11,11 @@ python:
 - 3.5-dev
 
 install:
+- pip install boutiques
 - git clone https://github.com/neurolabusc/dcm_qa.git
 
 before_script:
 - docker pull laletscaria/boutiques-dcm2niix:latest
 
 script: 
-- docker run --rm=false -v $PWD:$PWD -w $PWD laletscaria/boutiques-dcm2niix bosh exec launch dcm.json input.json
+- bosh exec launch dcm.json input.json
