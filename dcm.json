@@ -1,22 +1,22 @@
 {
     "tool-version": "1.0", 
     "name": "Boutiques dcm2niix", 
-    "command-line": "[INPUT_FOLDER] [OUTPUT_FOLDER]", 
+    "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
     "inputs":[
         {
-            "description": "DICOM Image folder with valid dicom images", 
+            "description":"input", 
             "value-key": "[INPUT_FOLDER]", 
             "type": "File", 
             "optional": false, 
-            "id": "input_folder", 
+            "id": "input", 
             "name": "Dicom Image Folder"
         },
         {   
-            "description": "Nifti images directory", 
+            "description":"output", 
             "value-key": "[OUTPUT_FOLDER]", 
             "type": "File", 
             "optional": false, 
-            "id": "output_folder", 
+            "id": "output", 
             "name": "Nifti Image Folder"
         } 
     ], 
@@ -29,8 +29,8 @@
         {
             "path-template": "[OUTPUT_FOLDER]", 
             "description": "Output nifti files", 
-            "optional": false, 
-            "id": "results", 
+            "optional": false,
+	    "id":"output", 
             "name": "Results"
         }
     ], 
