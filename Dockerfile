@@ -19,5 +19,4 @@ RUN cd /tmp && \
 	cmake -DBATCH_VERSION=ON -DUSE_OPENJPEG=ON .. && \
 	make && make install
 
-RUN git clone https://github.com/neurolabusc/dcm_qa.git /tmp/dcm_qa && \
-    mkdir -p Results
+RUN git clone https://github.com/neurolabusc/dcm_qa.git /tmp/dcm_qa
