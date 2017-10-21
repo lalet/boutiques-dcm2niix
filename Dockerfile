@@ -20,4 +20,4 @@ RUN cd /tmp && \
 	make && make install
 
 RUN git clone https://github.com/neurolabusc/dcm_qa.git /tmp/dcm_qa && \
-    mkdir -p results
+    mkdir -p Results
