@@ -17,4 +17,4 @@ before_script:
 - docker build -t dcm2niix_image -f Dockerfile .
 
 script: 
-- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix_image mkdir -p Results;bosh exec launch dcm.json input.json
+- docker run --rm=false -v $PWD:$PWD -w $PWD dcm2niix_image bosh exec launch dcm.json input.json
