@@ -28,7 +28,7 @@
     "output-files":[ 
         {   
 	    "id":"results",
-            "name": "Results",
+            "name": "Output",
             "description":"output folder",
 	    "path-template": "OUTPUT_FOLDER", 
             "optional": true
