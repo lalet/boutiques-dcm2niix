@@ -1,4 +1,4 @@
 {
- "input":"dcm_qa",
- "output":"output"
+ "input_dir":"dcm_qa",
+ "output_dir":"output"
 }

@@ -4,19 +4,19 @@
     "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
     "inputs":[
         {
-            "description":"input", 
-            "value-key": "[INPUT_FOLDER]", 
+            "description":"input folder", 
+            "value-key": "INPUT_FOLDER", 
             "type": "File", 
             "optional": false, 
-            "id": "input", 
+            "id": "input_dir", 
             "name": "Dicom Image Folder"
         },
         {   
-            "description":"output", 
-            "value-key": "[OUTPUT_FOLDER]", 
+            "description":"output folder", 
+            "value-key": "OUTPUT_FOLDER", 
             "type": "File", 
             "optional": false, 
-            "id": "output", 
+            "id": "output_dir", 
             "name": "Nifti Image Folder"
         } 
     ], 
@@ -26,12 +26,12 @@
     }, 
     "schema-version": "0.5", 
     "output-files":[ 
-        {
-            "path-template": "[OUTPUT_FOLDER]", 
-            "description": "Output nifti files", 
-            "optional": false,
-	    "id":"output", 
-            "name": "Results"
+        {   
+	    "id":"output_dir",
+            "name": "Results",
+            "description":"input folder",
+	    "path-template": "OUTPUT_FOLDER", 
+            "optional": false
         }
     ], 
     "suggested-resources": {
