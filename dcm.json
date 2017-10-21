@@ -1,7 +1,7 @@
 {
     "tool-version": "1.0", 
     "name": "Boutiques dcm2niix", 
-    "command-line": "dcm2niix [INPUT_FOLDER] [OUTPUT_FOLDER]", 
+    "command-line": "mkdir -P OUTPUT_FOLDER;dcm2niix INPUT_FOLDER", 
     "inputs":[
         {
             "description":"input folder", 
@@ -15,7 +15,7 @@
             "description":"output folder", 
             "value-key": "OUTPUT_FOLDER", 
             "type": "File", 
-            "optional": false, 
+            "optional": true, 
             "id": "output_dir", 
             "name": "Nifti Image Folder"
         } 
@@ -27,11 +27,11 @@
     "schema-version": "0.5", 
     "output-files":[ 
         {   
-	    "id":"output_dir",
-            "name": "Results",
-            "description":"input folder",
+	    "id":"results",
+            "name": "output",
+            "description":"output folder",
 	    "path-template": "OUTPUT_FOLDER", 
-            "optional": false
+            "optional": true
         }
     ], 
     "suggested-resources": {
